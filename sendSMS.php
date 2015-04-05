@@ -1,6 +1,12 @@
 <?php
 /* Send an SMS using Twilio. */
 
+// Set globals
+$SID = "";
+$AUTH = "";
+$FROM_NUMBER = "+";
+$TO_NUMBER = "+";
+
 // Set test harness
 $testing = $_REQUEST["testing"];
 if($testing == 1){
@@ -21,8 +27,8 @@ require "twilio-php-master/Services/Twilio.php";
 // Set AccountSid and AuthToken
 if($auth){
 	//--- Real credentials ---\\
-	$AccountSid = "ACc0bd4f32fff60c6a11705741ae149859";
-	$AuthToken = "c08c129207776608a90df19a23bd8eab";
+	$AccountSid = $SID;
+	$AuthToken = $AUTH;
 }else{
 	//--- Test credentials and numbers ---\\
 	$AccountSid = "ACcd3693035127a10d792e2289a20a8680";
@@ -30,7 +36,7 @@ if($auth){
 }
 
 // Get the number and message submitted via the HTML form
-$fromNumber = "+12096663246";
+$fromNumber = $FROM_NUMBER;
 $toNumber = "+1" . $_REQUEST["number"];
 $message = $_REQUEST["message"];
 
@@ -38,8 +44,8 @@ $message = $_REQUEST["message"];
 if ($testing){
 	if($auth){
 		$auth_msg = "trial account credentials";
-    	$fromNumber = "+12096663246";
-		$toNumber = "+12096400415";
+    	$fromNumber = $FROM_NUMBER;
+		$toNumber = $TO_NUMBER;
 	}else{
 		$auth_msg = "testing credentials";
 
