@@ -11,14 +11,14 @@ HOW TO RUN THE SCRIPTS
    to you in the globals section and save the file.
 
 3. Copy the downloaded files and folder to a local
-   or remote server (required for steps 3 and 4). 
+   or remote server (required for Options 1 and 2). 
 
-3. Option 1. Open the HTML file in a browser and enter the 
+4. Option 1. Open the HTML file in a browser and enter the 
    phone number I have given you, type a message in the 
    text box, and hit 'Send'. Your message will be sent to
    the phone number I have given you.
 
-4. Option 2. Type the following in a browser:
+5. Option 2. Type the following in a browser:
 
 		path/to/server/folder/sendSMS.php?testing=1&auth=X
 
@@ -26,7 +26,7 @@ HOW TO RUN THE SCRIPTS
    for test or live credentials (read the section 
    'PROGRAM ARCHITECTURE' below).
 
-5. Option 3. Open the php file and set the testing and auth
+6. Option 3. Open the php file and set the testing and auth
    variables on lines 11 and 17 to 1 and (0 for test or 1 
    for live credentials), respectively. 
 
