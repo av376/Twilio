@@ -28,7 +28,8 @@ HOW TO RUN THE SCRIPTS
 
 6. Option 3. Open the php file and set the testing and auth
    variables on lines 11 and 17 to 1 and (0 for test or 1 
-   for live credentials), respectively. 
+   for live credentials), respectively. The numbering is 
+   based on VI's visible line numbers (:set nu).
 
    Optional: Feel free to type in a different message than
    the one provided on line 66.
